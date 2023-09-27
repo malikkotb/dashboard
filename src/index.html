@@ -4,31 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
   <body>
     <div class="flex">
       <!-- Expandable Sidebar -->
-      <div class="w-1/5 border-r border-r-gray-200 shadow-md">
-        <div class="text-center bg-black bg-opacity-10 text-opacity-20 text-black px-2 py-1 m-2 font-bold text-xl">Logo</div>
-        <div class="flex flex-col flex-grow h-screen max-h-screen">
+      <div class="min-w-1/5 border-r border-r-gray-200 shadow-md">
+        <div
+          class="text-center bg-black bg-opacity-10 text-opacity-20 text-black px-2 py-1 m-2 mx-2 font-bold text-xl"
+        >
+          Logo
+        </div>
+        <div class="flex flex-col h-screen max-h-screen mx-2">
           <ul class="text-center px-2s">
-            <li class="rounded-full border my-1 border-blue-700 font-light text-xl text-blue-700"><i class="fa-solid fa-house"></i>Dashboard</li>
-            <li class="rounded-full my-1 font-light text-xl"><i class="fa-solid fa-people-group"></i>Customers</li>
-            <li class="rounded-full my-1 font-light text-xl"><i class="fa-solid fa-wrench"></i>Settings</li>
+            <li
+              class="rounded-full border my-1 border-blue-700 font-light text-xl text-blue-700"
+            >
+              <div class="flex items-center px-2">
+                <div>
+                  <i class="fa-solid fa-house"></i>
+                </div>
+                <p class="ml-4">Dashboard</p>
+              </div>
+            </li>
+
+            <li class="rounded-full my-1 font-light text-xl">
+              <div class="flex items-center px-2">
+                <div>
+                  <i class="fa-solid fa-people-group"></i>
+                </div>
+                <p class="ml-4">Customers</p>
+              </div>
+            </li>
+            <li class="rounded-full my-1 font-light text-xl">
+              <div class="flex items-center px-2">
+                <div>
+                  <i class="fa-solid fa-warehouse"></i>
+                </div>
+                <p class="ml-4">Settings</p>
+              </div>
+            </li>
           </ul>
 
-          <button class="bg-red-400 mt-auto">Collapse</button>
+          <button class="font-light text-xl">
+            <div class="flex items-center px-2">
+              <div>
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+              <!-- TODO: adjust left margin between arrow icon and text -->
+              <p class="ml-4">Collapse</p>
+            </div>
+          </button>
         </div>
       </div>
 
       <!-- Main Content  -->
       <main class="bg-stone-400 bg-opacity-40 w-screen">
         <!-- Sticky Navbar -->
-        <div class="p-4 justify-between flex md:h-24 border-b">
-          <h1 class="text-4xl text-center">Dashboard</h1>
-          <h1 class="text-center">User</h1>
+        <div class="p-4 md:h-24 border-b">
+          <!-- TODO: align Dashboard and start of "Projects..." vertically -->
+          <div class="justify-between items-center flex">
+            <h1 class="text-5xl font-light text-opacity-60 text-black text-center">Dashboard</h1>
+            <h1 class="text-center">User</h1>
+          </div>
+          <div class="text-sm my-2 text-opacity-40 text-black">Projects: 42 | Customers: 10</div>
         </div>
 
         <!-- main content ( responsive grid) -->

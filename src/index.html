@@ -14,7 +14,7 @@
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="flex">
+    <div class="flex m-0 fixed">
       <!-- Expandable Sidebar -->
       <div class="min-w-1/5 border-r border-r-gray-200 shadow-md">
         <div
@@ -67,18 +67,28 @@
 
       <!-- Main Content  -->
       <main class="bg-stone-400 bg-opacity-40 w-screen">
-        <!-- Sticky Navbar -->
+        <!-- Sticky Navbar, TODO: make sticky  -->
         <div class="p-4 md:h-24 border-b">
           <!-- TODO: align Dashboard and start of "Projects..." vertically -->
           <div class="justify-between items-center flex">
             <h1 class="text-5xl font-light text-opacity-60 text-black text-center">Dashboard</h1>
-            <h1 class="text-center">User</h1>
+            <img class="w-12 h-12" src="user.svg" alt="user svg">
+            <!-- <h1 class="text-center">User</h1> -->
           </div>
           <div class="text-sm my-2 text-opacity-40 text-black">Projects: 42 | Customers: 10</div>
         </div>
 
         <!-- main content ( responsive grid) -->
-        <div></div>
+        <div class="grid grid-cols-3 gap-4">
+          <!-- {data.map((user) => (
+            <div className="user">{user}</div>
+          ))} -->
+          <div class="bg-white w-full h-full border rounded-xl shadow-md"">
+            <h2>Card 1 Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+          </div>
+          
+        </div>
       </main>
     </div>
   </body>

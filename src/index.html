@@ -14,9 +14,9 @@
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="flex m-0 fixed">
+    <div class="flex m-0">
       <!-- Expandable Sidebar -->
-      <div class="min-w-1/5 border-r border-r-gray-200 shadow-md">
+      <div class="h-screen sticky top-0 bg-white hidden sm:block min-w-1/5 border-r border-r-gray-200 shadow-md">
         <div
           class="text-center bg-black bg-opacity-10 text-opacity-20 text-black px-2 py-1 m-2 mx-2 font-bold text-xl"
         >
@@ -66,9 +66,10 @@
       </div>
 
       <!-- Main Content  -->
-      <main class="bg-stone-400 bg-opacity-40 min-w-4/5">
+      <main class="bg-stone-200 min-w-4/5">
         <!-- Sticky Navbar, TODO: make sticky, make responsive for smaller screens  -->
-        <div class="p-4 md:h-24 border-b">
+        <nav class="sticky top-0 bg-stone-200 p-4 h-24 border-b">
+          <!-- TODO: remove border-b after finished -->
           <!-- TODO: align Dashboard and start of "Projects..." vertically -->
           <div class="justify-between items-center flex">
             <h1 class="text-5xl font-light text-opacity-60 text-black text-center">Dashboard</h1>
@@ -76,33 +77,247 @@
             <!-- <h1 class="text-center">User</h1> -->
           </div>
           <div class="text-sm my-2 text-opacity-40 text-black">Projects: 42 | Customers: 10</div>
-        </div>
+        </nav>
         
 
         <!-- main content ( responsive grid) -->
-        <div class="">
-          <div class="grid grid-cols-3 gap-4 py-4 px-32 grid-rows-5">
+        <div class="overflow-y-auto grid md:grid-cols-2 lg:grid-cols-3 gap-4 py-4 px-10 sm:px-36 lg:px-28 grid-rows-6">
           
-            <!-- card -->
-            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-md py-2 px-3">
-              <h2 class="text-lg font-bold">Card 1 Title</h2>
-              <p class="line-clamp-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
-              <div class="flex items-center justify-between">
+            <!-- cards -->
+
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-1">Yakidoo</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center pt-3 pb-1 justify-between">
                 <div>
                   <i class="fa-solid fa-money-bill text-sm"></i>
                   <p class="ml-2 text-sm">1.2345,67 €</p>
                 </div>
                 <div>
-                  <i class="fa-solid fa-money-bill text-sm"></i>
-                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer A</p>
                 </div>
-                <div></div>
               </div>
-            </div>           
-          </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Lexoo</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center p-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer B</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Bluejam</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center p-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer C</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Devshare</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center p-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer A</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Edgewire</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center p-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer D</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Wikizz</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center p-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer A</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Roombo</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center p-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer A</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Dabjam</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center p-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer A</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Photobug</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center p-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer A</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Shuffletag</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center p-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer A</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Thoughtbridge</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center pb-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer A</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Twinte</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center pb-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer A</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Browselab</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center pb-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer A</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Realmix</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center pb-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer A</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="bg-white h-48 overflow-hidden border rounded-xl shadow-lg py-3 px-3">
+              <h2 class="text-xl font-bold pb-2">Brainbox</h2>
+              <p class="line-clamp-4 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas facere in, perferendis temporibus enim cumque maiores optio possimus quae sapiente voluptatum quos tempore aut cupiditate blanditiis eligendi quisquam eius porro.</p>
+              <div class="flex items-center pb-2 justify-between">
+                <div>
+                  <i class="fa-solid fa-money-bill text-sm"></i>
+                  <p class="ml-2 text-sm">1.2345,67 €</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-user text-sm"></i>
+                  <p class="ml-2 text-sm">Customer A</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+                  
         </div>
-        
+      
+
+       
       </main>
+       <!-- TODO: dashboard moves to bottom on small screens -->
+       
     </div>
   </body>
 </html>
